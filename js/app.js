@@ -1,6 +1,6 @@
 var wrapper = document.getElementById("signature-pad"),
     clearButton = wrapper.querySelector("[data-action=clear]"),
-    saveButton = wrapper.querySelector("[data-action=save]"),
+    submitButton = wrapper.querySelector("[data-action=submit]"),
     canvas = wrapper.querySelector("canvas"),
     signaturePad;
 
@@ -23,7 +23,7 @@ clearButton.addEventListener("click", function (event) {
     signaturePad.clear();
 });
 
-saveButton.addEventListener("click", function (event) {
+submitButton.addEventListener("click", function (event) {
     if (signaturePad.isEmpty()) {
         alert("Please provide signature first.");
     } else {
